@@ -18,10 +18,10 @@
 
         symbol {
             bindings = <
-  &kp PERCENT  &kp DOLLAR  &kp AMPERSAND  &kp CARET  &kp SLASH                     &kp BACKSLASH  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN     &kp GREATER_THAN
-  &kp AT_SIGN  &kp HASH    &kp ASTERISK   &kp PLUS   &kp EQUAL                     &kp UNDER      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI          &kp COLON
-  &kp GRAVE    &kp TILDE   &trans         &kp EXCL   &kp QUESTION                  &kp PIPE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-  &trans       &trans      &trans         &trans     &trans        &trans  &trans  &trans                                                                        &trans
+  &kp LS(N5)        &kp LS(NUMBER_4)  &kp LS(N7)        &kp LS(NUMBER_6)  &kp SLASH                      &kp BACKSLASH   &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(COMMA)     &kp LS(PERIOD)
+  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(ASTERISK)  &kp PLUS          &kp LS(EQUAL)                  &kp UNDERSCORE  &kp LPAR              &kp RIGHT_PARENTHESIS  &kp SEMI          &kp COLON
+  &kp GRAVE         &kp TILDE         &trans            &kp EXCL          &kp QUESTION                   &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+  &trans            &trans            &trans            &trans            &trans         &trans  &trans  &trans                                                                         &trans
             >;
         };
 
