@@ -19,7 +19,7 @@
 
         symbol {
             bindings = <
-  &kp Q         &kp W      &kp E       &kp R            &kp T                                &kp Y    &kp U  &kp I      &kp O      &mt RIGHT_ALT P
+  &kp JP_PRCNT         &kp JP_DLLR      &kp JP_AMPS       &kp JP_CARET            &kp JP_SLASH                                &kp JP_BSLH    &kp JP_LBRC  &kp JP_RBRC      &kp JP_LT      &kp JP_RT
   &kp JP_AT         &kp S      &kp D       &kp F            &kp G                                &kp H    &kp J  &kp K      &kp L      &kp BACKSPACE
   &kp Z         &kp X      &kp C       &kp V            &kp B                                &kp N    &kp M  &mkp LCLK  &mkp RCLK  &mt RIGHT_SHIFT MINUS
   &kp LEFT_WIN  &kp COMMA  &kp PERIOD  &mt LCTRL LANG2  &lt 5 SPACE  &lt 3 TAB  &lt 1 LANG1  &kp RET                               &lt 2 ESCAPE
