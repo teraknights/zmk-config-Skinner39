@@ -37,10 +37,10 @@
 
         number {
             bindings = <
-  &trans        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans                     &kp ENTER          &kp HOME        &kp UP_ARROW  &kp END    &kp LEFT_ALT
-  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                     &kp PAGE_UP        &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
-  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                     &mt LEFT_ALT LEFT  &mt LALT RIGHT  &mkp LCLK     &mkp RCLK  &mkp MB3
-  &trans        &trans        &trans        &trans        &trans  &trans  &kp LCTRL  &kp DELETE                                                  &trans
+  &trans                 &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans                     &kp ENTER          &kp HOME        &kp UP_ARROW  &kp END    &kp LEFT_ALT
+  &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                     &kp PAGE_UP        &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
+  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                     &mt LEFT_ALT LEFT  &mt LALT RIGHT  &mkp LCLK     &mkp RCLK  &mkp MB3
+  &trans                 &trans        &trans        &trans        &trans  &trans  &kp LCTRL  &kp DELETE                                                  &trans
             >;
         };
 
