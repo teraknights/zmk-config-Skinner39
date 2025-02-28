@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     keymap {
@@ -10,9 +11,9 @@
 
         default_layer {
             bindings = <
-  &kp Q         &kp W      &kp E       &kp R          &kp T                                  &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
-  &kp A         &kp S      &kp D       &kp F          &kp G                                  &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
-  &mt LSHFT Z   &kp X      &kp C       &kp V          &kp B                                  &kp N      &kp M  &mkp LCLK  &mkp RCLK  &mt RIGHT_SHIFT MINUS
+  &kp Q         &kp W      &kp E       &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
+  &kp A         &kp S      &kp D       &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
+  &mt LSHFT Z   &kp X      &kp C       &kp V          &kp B                                      &kp N      &kp M  &mkp LCLK  &mkp RCLK  &lt 5 MINUS
   &kp LEFT_WIN  &kp COMMA  &kp PERIOD  &mt LCTRL TAB  &lt 5 SPACE  &lt 1 LANG2  &mt LCTRL LANG1  &lt 3 RET                               &lt 2 ESCAPE
             >;
         };
@@ -40,7 +41,7 @@
   &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                     &kp ENTER   &kp HOME       &kp UP_ARROW  &kp END    &kp LEFT_ALT
   &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                     &kp LEFT    &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PAGE_DOWN
   &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &mkp MB3
-  &trans                 &kp JP_LPAR        &kp JP_RPAR    &kp JP_PLUS        &trans  &trans  &kp LCTRL  &kp DELETE                                          &trans
+  &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans  &kp LCTRL  &kp DELETE                                          &trans
             >;
         };
 
@@ -55,10 +56,10 @@
 
         scroll_layer {
             bindings = <
-  &trans  &kp F7  &kp F8  &kp F9  &kp F10                  &trans  &trans  &trans  &trans  &trans
-  &trans  &kp F4  &kp F5  &kp F6  &kp F11                  &trans  &trans  &trans  &trans  &trans
-  &trans  &kp F1  &kp F2  &kp F3  &kp F12                  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans                          &trans
+  &trans  &kp F7  &kp F8  &kp F9  &kp F10                  &trans  &trans            &trans            &trans            &trans
+  &trans  &kp F4  &kp F5  &kp F6  &kp F11                  &trans  &mmv MOVE_X(300)  &mmv MOVE_Y(300)  &mmv MOVE_Y(500)  &mmv MOVE_X(500)
+  &trans  &kp F1  &kp F2  &kp F3  &kp F12                  &trans  &trans            &mkp LCLK         &mkp RCLK         &trans
+  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans                                                        &trans
             >;
         };
 
