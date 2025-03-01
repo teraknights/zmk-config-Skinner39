@@ -7,7 +7,7 @@
 // マウス移動時のイベントリスナー
 static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
     // トラックボールが動いたらマウスレイヤーを有効化
-    zmk_layer_activate(MOUSE_LAYER);
+    zmk_layer_activate(scroll_layer);
     
     // タイマーをリセットし、一定時間後にデフォルトレイヤーに戻る
     k_timer_start(&layer_reset_timer, K_SECONDS(3), K_NO_WAIT);
@@ -21,7 +21,7 @@ ZMK_SUBSCRIPTION(mouse_layer_listener, zmk_hid_mouse_move_event);
 
 // 3秒後にレイヤーをリセットするための関数
 void reset_layer(struct k_timer *timer_id) {
-    zmk_layer_deactivate(MOUSE_LAYER);
+    zmk_layer_deactivate(scroll_layer);
 }
 
 // タイマーの宣言
