@@ -6,7 +6,7 @@
 
 // トラックボールの動作を検知する関数
 static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
-    zmk_layer_activate(MOUSE_LAYER);
+    zmk_layer_activate(scroll_layer);
     
     // 3秒後にデフォルトレイヤーへ戻るタイマーをセット
     k_timer_start(&layer_reset_timer, K_SECONDS(3), K_NO_WAIT);
@@ -16,7 +16,7 @@ static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
 
 // タイマーが切れたらデフォルトレイヤーに戻る
 void reset_layer(struct k_timer *timer_id) {
-    zmk_layer_deactivate(MOUSE_LAYER);
+    zmk_layer_deactivate(scroll_layer);
 }
 
 // タイマーの宣言
