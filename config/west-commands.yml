@@ -1,0 +1,6 @@
+west-commands:
+  - file: config/modules/custom_mouse/west-commands.py
+    commands:
+      - name: custom-mouse
+        class: CustomMouse
+        help: Custom mouse module for automatic layer switching

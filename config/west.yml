@@ -28,3 +28,9 @@ manifest:
       revision: main
   self:
     path: config
+    west-commands: config/west-commands.yml  # カスタムモジュールのコマンドを定義
+  projects:
+    - name: zmk
+      url: https://github.com/zmkfirmware/zmk.git
+      revision: main
+      import: app
