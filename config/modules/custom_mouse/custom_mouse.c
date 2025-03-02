@@ -5,7 +5,7 @@
 #include <zmk/layers.h>
 
 // マウスレイヤーの定義（レイヤー番号は適宜変更）
-#define MOUSE_LAYER 1
+#define MOUSE_LAYER 2
 
 // トラックボールの動きを検知するリスナー
 static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
