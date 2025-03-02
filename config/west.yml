@@ -23,13 +23,6 @@ manifest:
     - name: zmk-lpm009m360a-driver
       remote: yangxing
       revision: master
-    - name: custom_mouse
-      path: config/modules/custom_mouse
-      revision: main
-    - name: zmk
-      url: https://github.com/zmkfirmware/zmk.git
-      revision: main
-      import: app
   self:
     path: config
     west-commands: config/west-commands.yml  # カスタムモジュールのコマンドを定義
