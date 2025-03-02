@@ -23,5 +23,8 @@ manifest:
     - name: zmk-lpm009m360a-driver
       remote: yangxing
       revision: master
+    - name: custom_mouse
+      path: config/modules/custom_mouse
+      revision: main
   self:
     path: config

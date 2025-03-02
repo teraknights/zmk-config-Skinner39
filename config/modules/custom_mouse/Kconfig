@@ -1,0 +1,5 @@
+config ZMK_CUSTOM_MOUSE
+    bool "Enable custom mouse module"
+    default y
+    help
+      Enable the custom mouse module for automatic mouse layer switching.
