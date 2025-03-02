@@ -6,24 +6,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-        hold_mouse_layer: hold_mouse_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_MOUSE_LAYER";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <3000>;
-            flavor = "balanced";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-  &hold_mouse_layer 5 Q  &kp W      &kp E       &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
+  &kp Q  &kp W      &kp E       &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
   &kp A                  &kp S      &kp D       &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
   &mt LSHFT Z            &kp X      &kp C       &kp V          &kp B                                      &kp N      &kp M  &mkp LCLK  &mkp RCLK  &lt 5 MINUS
   &kp LEFT_WIN           &kp COMMA  &kp PERIOD  &mt LCTRL TAB  &lt 5 SPACE  &lt 1 LANG2  &mt LCTRL LANG1  &lt 3 RET                               &lt 2 ESCAPE

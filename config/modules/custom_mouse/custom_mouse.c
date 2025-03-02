@@ -3,12 +3,17 @@
 #include <zmk/hid.h>
 #include <zmk/keymap.h>
 #include <zmk/layers.h>
+#include <zephyr/logging/log.h>
 
-// マウスレイヤーの定義（レイヤー番号は適宜変更）
-#define MOUSE_LAYER 2
+LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
+
+// マウスレイヤーの定義（自由に変更可能）
+#define MOUSE_LAYER 5
 
 // トラックボールの動きを検知するリスナー
 static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
+    LOG_INF("Mouse movement detected! Activating MOUSE_LAYER");
+    
     zmk_layer_activate(MOUSE_LAYER);
     
     // 3秒後に元のレイヤーに戻る
@@ -19,6 +24,7 @@ static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
 
 // 3秒後にレイヤーをリセットする関数
 void reset_layer(struct k_timer *timer_id) {
+    LOG_INF("Resetting to default layer");
     zmk_layer_deactivate(MOUSE_LAYER);
 }
 
