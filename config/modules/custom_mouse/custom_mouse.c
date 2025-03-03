@@ -12,7 +12,8 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 // トラックボールの動きを検知するリスナー
 static int mouse_movement_listener(const struct zmk_hid_mouse_move_event *ev) {
-    LOG_INF("Mouse movement detected! Activating MOUSE_LAYER");
+    printk("Mouse movement detected! X: %d, Y: %d\n", ev->dx, ev->dy);
+    LOG_INF("Mouse movement detected! X: %d, Y: %d", ev->dx, ev->dy);
     
     zmk_layer_activate(MOUSE_LAYER);
     
