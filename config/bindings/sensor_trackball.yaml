@@ -1,0 +1,6 @@
+description: ZMK Trackball Sensor Behavior
+compatible: "zmk,sensor-behavior"
+properties:
+  timeout:
+    type: int
+    description: "Time in milliseconds before returning to default layer"
