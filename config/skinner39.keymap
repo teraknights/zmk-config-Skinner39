@@ -6,6 +6,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        sensor_trackball = &sensor_trackball;
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -16,6 +22,7 @@
   &mt LSHFT Z   &kp X      &kp C       &kp V          &kp B                                      &kp N      &kp M  &mkp LCLK  &mkp RCLK  &lt 5 MINUS
   &kp LEFT_WIN  &kp COMMA  &kp PERIOD  &mt LCTRL TAB  &lt 5 SPACE  &lt 1 LANG2  &mt LCTRL LANG1  &lt 3 RET                               &lt 2 ESCAPE
             >;
+        sensor-bindings = <&sensor_trackball>;
         };
 
         symbol {

@@ -1,0 +1,5 @@
+config ZMK_SENSOR_TRACKBALL
+    bool "Enable Trackball Sensor Behavior"
+    default y
+    help
+        Enables trackball sensor behavior for dynamic layer switching.

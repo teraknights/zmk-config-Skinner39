@@ -164,3 +164,11 @@ zephyr_udc0:&usbd {
         device = <&pmw_split>;
     };
 };
+
+/ {
+    trackball_sensor: trackball@1 {
+        compatible = "zmk,sensor";
+        label = "TRACKBALL";
+        sensor-type = "motion";
+    };
+};
