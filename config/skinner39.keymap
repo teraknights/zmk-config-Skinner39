@@ -5,6 +5,48 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#include <zmk/event_manager.h>
+#include <zmk/events/mouse_move_state_changed.h>
+#include <zmk/layers.h>
+#include <zmk/keymap.h>
+#include <zmk/timer.h>
+
+
+#define SCROLL_LAYER 1
+#define DEFAULT_LAYER 0
+
+static struct k_timer trackball_timer;
+
+static void trackball_timer_handler(struct k_timer *dummy) {
+    zmk_layer_deactivate(SCROLL_LAYER);
+    zmk_layer_activate(DEFAULT_LAYER);
+}
+
+static int trackball_movement_listener(const zmk_event_t *eh) {
+    const struct zmk_mouse_move_state_changed *ev = as_zmk_mouse_move_state_changed(eh);
+    if (ev == NULL) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    if (ev->x != 0 || ev->y != 0) {
+        zmk_layer_activate(SCROLL_LAYER);
+        zmk_layer_deactivate(DEFAULT_LAYER);
+        k_timer_start(&trackball_timer, K_SECONDS(2), K_NO_WAIT);
+    }
+
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(trackball_movement_listener, trackball_movement_listener);
+ZMK_SUBSCRIPTION(trackball_movement_listener, zmk_mouse_move_state_changed);
+
+void main(void) {
+    // ...existing code...
+    k_timer_init(&trackball_timer, trackball_timer_handler, NULL);
+    // ...existing code...
+}
+
+
 / {
     keymap {
         compatible = "zmk,keymap";

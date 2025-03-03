@@ -93,3 +93,8 @@ nice_view_spi: &spi2 {
 							, <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 };
+
+&trackball {
+    status = "okay";
+    // ...additional trackball configuration...
+};

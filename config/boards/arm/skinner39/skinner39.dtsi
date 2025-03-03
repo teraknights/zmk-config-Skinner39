@@ -164,3 +164,8 @@ zephyr_udc0:&usbd {
         device = <&pmw_split>;
     };
 };
+
+&trackball {
+    status = "okay";
+    // ...additional trackball configuration...
+};
