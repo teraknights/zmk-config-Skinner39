@@ -1,0 +1,8 @@
+description: "Trackball Sensor Behavior"
+compatible: "zmk,sensor-behavior"
+include: base.yaml
+properties:
+  sensor-binding-cells:
+    type: int
+    required: true
+    description: "Number of binding cells"
