@@ -9,7 +9,8 @@
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 static int key_press_listener(const zmk_event_t *eh) {
-    const struct zmk_keycode_state_changed *ev = as_zmk_keycode_state_changed(eh);
+    const struct zmk_keycode_state_changed *ev = (const struct zmk_keycode_state_changed *)eh;
+
     if (!ev) {
         return -ENOTSUP;  // イベントの型が違う場合は無視
     }
