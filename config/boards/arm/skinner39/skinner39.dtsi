@@ -169,7 +169,9 @@ zephyr_udc0:&usbd {
     behaviors {
         sensor_trackball: sensor_trackball {
             compatible = "zmk,sensor-behavior";
-            label = "SENSOR_TRACKBALL";
+            status = "okay";
+            #sensor-binding-cells = <0>;
         };
     };
 };
+
