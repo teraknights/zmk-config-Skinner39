@@ -4,18 +4,17 @@
 #include <zmk/behavior.h>
 #include <zmk/keymap.h>
 #include <zmk/events/keycode_state_changed.h>
+#include <dt-bindings/zmk/keys.h>  // HID キーコード定義
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 static int key_press_listener(const struct zmk_keycode_state_changed *ev) {
-    if (ev->keycode == HID_USAGE_KEY_A) {  // `Q` キーをチェック
-        if (ev->state) {  // キーが押されたとき（0 = 離したとき, 1 = 押したとき）
-            printk("Q Key Pressed!\n");
-            LOG_INF("Q Key Pressed!");
-        } else {
-            printk("Q Key Released!\n");
-            LOG_INF("Q Key Released!");
-        }
+    if (ev->state) {  // 1 = キーが押されたとき
+        printk("Key Pressed! Keycode: 0x%02X\n", ev->keycode);
+        LOG_INF("Key Pressed! Keycode: 0x%02X", ev->keycode);
+    } else {  // 0 = キーを離したとき
+        printk("Key Released! Keycode: 0x%02X\n", ev->keycode);
+        LOG_INF("Key Released! Keycode: 0x%02X", ev->keycode);
     }
     return 0;
 }
