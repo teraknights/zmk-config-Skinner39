@@ -9,19 +9,9 @@
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 static int key_press_listener(const zmk_event_t *eh) {
-    const struct zmk_keycode_state_changed *ev = (const struct zmk_keycode_state_changed *)eh;
 
-    if (!ev) {
-        return -ENOTSUP;  // イベントの型が違う場合は無視
-    }
-
-    if (ev->state) {  // 1 = キーが押されたとき
-        printk("Key Pressed! Keycode: 0x%02X\n", ev->keycode);
-        LOG_INF("Key Pressed! Keycode: 0x%02X", ev->keycode);
-    } else {  // 0 = キーを離したとき
-        printk("Key Released! Keycode: 0x%02X\n", ev->keycode);
-        LOG_INF("Key Released! Keycode: 0x%02X", ev->keycode);
-    }
+        printk("Key Released!(printk)" );
+        LOG_INF("Key Released!(log_inf)");
     return 0;
 }
 
