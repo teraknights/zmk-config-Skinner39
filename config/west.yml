@@ -25,3 +25,5 @@ manifest:
       revision: master
   self:
     path: config
+  bindings-dirs:
+    - config/dts/bindings
