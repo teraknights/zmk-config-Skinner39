@@ -12,7 +12,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: teraknights
       revision: main
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
@@ -25,5 +25,4 @@ manifest:
       revision: master
   self:
     path: config
-  bindings-dirs:
-    - config/dts/bindings
+
