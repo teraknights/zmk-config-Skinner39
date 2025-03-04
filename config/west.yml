@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: yangxing
       url-base: https://github.com/yangxing844
+    - name: teraknights
+      url-base: https://github.com/teraknights
   projects:
     - name: zmk
       remote: zmk
