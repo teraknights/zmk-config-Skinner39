@@ -51,6 +51,7 @@ nice_view_spi: &spi2 {
 			evt-type = <INPUT_EV_REL>;
 			x-input-code = <INPUT_REL_X>;
 			y-input-code = <INPUT_REL_Y>;
+			automouse-layer = <4>;
 	};
 };
 
@@ -68,6 +69,7 @@ nice_view_spi: &spi2 {
 &matrix_physical_layout {
   	kscan = <&kscan0>;
 };
+
 
 / {
 	chosen {
