@@ -9,7 +9,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_layer { //0
             bindings = <
   &kp Q         &kp W      &kp E       &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
   &kp A         &kp S      &kp D       &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
@@ -19,7 +19,7 @@
         };
 
         symbol {
-            bindings = <
+            bindings = < //1
   &kp JP_PRCNT  &kp JP_DLLR   &kp JP_AMPS   &kp JP_CARET  &kp JP_SLASH                  &kp JP_BSLH   &kp JP_LBRC  &kp JP_RBRC  &kp JP_LT    &kp JP_RT
   &kp JP_AT     &kp JP_HASH   &kp JP_ASTRK  &kp JP_PLUS   &kp JP_EQUAL                  &kp JP_UNDER  &kp JP_LPAR  &kp JP_RPAR  &kp JP_SEMI  &kp JP_COLON
   &kp JP_GRAVE  &kp JP_TILDE  &kp JP_YEN    &kp JP_EXCL   &kp JP_QMARK                  &kp JP_PIPE   &kp JP_LBKT  &kp JP_RBKT  &kp JP_SQT   &kp JP_DQT
@@ -28,7 +28,7 @@
         };
 
         symbol_layer {
-            bindings = <
+            bindings = < //2
   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                  &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
   &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                       &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT
   &trans           &trans        &trans        &trans        &trans                       &kp UNDERSCORE  &kp PLUS       &trans            &trans                &kp BACKSLASH
@@ -37,7 +37,7 @@
         };
 
         number {
-            bindings = <
+            bindings = < //3
   &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                     &kp ENTER   &kp HOME       &kp UP_ARROW  &kp END    &kp LEFT_ALT
   &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                     &kp LEFT    &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PAGE_DOWN
   &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &mkp MB3
@@ -46,7 +46,7 @@
         };
 
         function_layer {
-            bindings = <
+            bindings = < //4
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
@@ -55,7 +55,7 @@
         };
 
         scroll_layer {
-            bindings = <
+            bindings = < //5
   &trans  &kp F7  &kp F8  &kp F9  &kp F10                  &trans  &trans           &trans            &trans           &trans
   &trans  &kp F4  &kp F5  &kp F6  &kp F11                  &trans  &msc MOVE_X(15)  &msc MOVE_Y(-15)  &msc MOVE_X(15)  &msc MOVE_X(-15)
   &trans  &kp F1  &kp F2  &kp F3  &kp F12                  &trans  &mkp LCLK        &msc MOVE_Y(10)   &mkp RCLK        &trans
@@ -64,7 +64,7 @@
         };
 
         snipe_layer {
-            bindings = <
+            bindings = < //6
   &trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
@@ -73,7 +73,7 @@
         };
 
         customizable_layer {
-            bindings = <
+            bindings = < // 7
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
