@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: yangxing
       url-base: https://github.com/yangxing844
+    - name: sayu-hub
+      url-base: https://github.com/sayu-hub
     - name: teraknights
       url-base: https://github.com/teraknights
   projects:
@@ -14,7 +16,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: teraknights
+      remote: sayu-hub
       revision: main
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
