@@ -11,13 +11,13 @@ manifest:
     - name: sayu-hub
       url-base: https://github.com/sayu-hub
   projects:
+    - name: zmk-pmw3610-driver
+      remote: sayu-hub
+      revision: main
     - name: zmk
       remote: zmk
       revision: main
       import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: sayu-hub
-      revision: main
 #    - name: zmk-pmw3610-driver-sayu
 #      remote: teraknights
 #      revision: main
