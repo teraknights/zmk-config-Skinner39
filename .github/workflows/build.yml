@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
 
       # デバッグ情報を有効化
-      - name: デバッグログを有効化
+      - name: デバッグログを有効化　
         run: echo "ACTIONS_RUNNER_DEBUG=true" >> $GITHUB_ENV
 
       # zmk_keymapライブラリの存在確認
