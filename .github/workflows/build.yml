@@ -9,3 +9,20 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+######
+
+    steps:
+      # デバッグ情報を有効化
+      - name: Enable debug logs
+        run: echo "ACTIONS_RUNNER_DEBUG=true" >> $GITHUB_ENV
+
+      # zmk_keymapの存在確認
+      - name: Check for zmk_keymap library
+        run: |
+          if find build -name "*zmk_keymap*.a"; then
+            echo "zmk_keymap library found!"
+          else
+            echo "zmk_keymap library not found!"
+            exit 1
+          fi
