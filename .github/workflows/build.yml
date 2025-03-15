@@ -12,7 +12,7 @@ jobs:
 
 ######
   debug:
-    needs: build  # buildジョブの後に実行
+    #needs: build  # buildジョブの後に実行
     runs-on: ubuntu-latest
     steps:
       # コードのチェックアウト
