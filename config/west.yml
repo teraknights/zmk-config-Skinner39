@@ -18,7 +18,7 @@ manifest:
     - name: zmk-pmw3610-driver-sayu
       remote: teraknights
       revision: main
-#    - name: zmk-pmw3610-driver-sayu
+ #    - name: zmk-pmw3610-driver-sayu
 #      remote: teraknights
 #      revision: main
 #    - name: zmk-split-peripheral-input-relay
