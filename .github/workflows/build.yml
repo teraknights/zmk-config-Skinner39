@@ -8,27 +8,27 @@ on:
 
 jobs:
   build:
-    uses: teraknights/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
-######
-  debug:
-    #needs: build  # buildジョブの後に実行
-    runs-on: ubuntu-latest
-    steps:
-      # コードのチェックアウト
-      - name: Checkout code
-        uses: actions/checkout@v3
+# ######
+#   debug:
+#     #needs: build  # buildジョブの後に実行
+#     runs-on: ubuntu-latest
+#     steps:
+#       # コードのチェックアウト
+#       - name: Checkout code
+#         uses: actions/checkout@v3
 
-      # デバッグ情報を有効化
-      - name: デバッグログを有効化　
-        run: echo "ACTIONS_RUNNER_DEBUG=true" >> $GITHUB_ENV
+#       # デバッグ情報を有効化
+#       - name: デバッグログを有効化　
+#         run: echo "ACTIONS_RUNNER_DEBUG=true" >> $GITHUB_ENV
 
-      # zmk_keymapライブラリの存在確認
-      - name: zmk_keymapライブラリをチェック
-        run: |
-          if find build -name "*zmk_keymap*.a"; then
-            echo "zmk_keymapライブラリが見つかりました！"
-          else
-            echo "zmk_keymapライブラリが見つかりませんでした！"
-            exit 1
-          fi
+#       # zmk_keymapライブラリの存在確認
+#       - name: zmk_keymapライブラリをチェック
+#         run: |
+#           if find build -name "*zmk_keymap*.a"; then
+#             echo "zmk_keymapライブラリが見つかりました！"
+#           else
+#             echo "zmk_keymapライブラリが見つかりませんでした！"
+#             exit 1
+#           fi
