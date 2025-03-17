@@ -3,7 +3,8 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_SKINNER39_LEFT
+# if BOARD_SKINNER39_LEFT
+if BOARD_SKINNER39_RIGHT
 
 config ZMK_KEYBOARD_NAME
 		default "SKINNER39"
@@ -11,13 +12,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 		default y
 endif 
-
-# teraknights add
-if BOARD_SKINNER39_RIGHT
-
-config ZMK_POINTING
-    default y
-endif
 
 if BOARD_SKINNER39_LEFT || BOARD_SKINNER39_RIGHT
 
