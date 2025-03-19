@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    #uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    uses: teraknights/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    #uses: teraknights/zmk/.github/workflows/build-user-config.yml@main
 # ######
 #   debug:
 #     #needs: build  # buildジョブの後に実行
