@@ -1,5 +1,8 @@
 #include "skinner39.dtsi"
 #include <dt-bindings/led/led.h>
+//tera add
+#include <input/processors.dtsi>
+//tera end
 
 &pinctrl {
     spi2_default: spi2_default {
