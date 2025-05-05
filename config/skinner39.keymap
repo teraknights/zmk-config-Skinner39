@@ -31,17 +31,17 @@
             bindings = <
   &trans            &trans      &trans          &trans       &trans                       &trans          &trans        &trans            &trans            &trans
   &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                       &trans          &trans        &trans            &trans            &trans
-  &trans           &trans        &trans        &trans        &trans                       &trans          &trans        &trans            &trans                &trans
-  &trans           &trans        &trans        &trans        &trans       &trans  &trans  &trans                                                                 &trans
+  &trans           &trans        &trans        &trans        &trans                       &trans          &trans        &trans            &trans            &trans
+  &trans           &trans        &trans        &trans        &trans       &trans  &trans  &trans                                                            &trans
             >;
         };
 
         number {
             bindings = <
-  &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                     &kp HOME       &kp END        &kp UP_ARROW        &kp END             &kp LEFT_ALT
-  &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                     &kp LEFT        &kp DOWN        &kp UP_ARROW        &kp RIGHT           &kp PAGE_UP
-  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &msc MOVE_X(15) &msc MOVE_Y(10) &msc MOVE_Y(-15)    &msc MOVE_X(-15)    &kp PAGE_DOWN
-  &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans         &trans  &trans                                         &trans
+  &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                     &kp HOME            &kp END             &kp UP_ARROW        &kp END             &kp LEFT_ALT
+  &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                     &kp LEFT            &kp DOWN            &kp UP_ARROW        &kp RIGHT           &kp PAGE_UP
+  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &msc MOVE_X(15)     &msc MOVE_Y(15)     &msc MOVE_Y(-15)    &msc MOVE_X(-15)    &kp PAGE_DOWN
+  &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans         &trans  &trans                                                                      &trans
             >;
         };
 
