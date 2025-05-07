@@ -12,7 +12,7 @@
         default_layer { //0
             bindings = < //default
   &kp Q         &kp W      &kp E       &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
-  &kp A         &kp S      &kp D       &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
+  &mt LEFT_ALT A   &kp S      &kp D       &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
   &mt LSHFT Z   &kp X      &kp C       &kp V          &kp B                                      &kp N      &kp M  &mkp LCLK  &mkp RCLK   &mt LSHFT MINUS
   &kp LEFT_WIN  &lt 6 COMMA  &lt 5 PERIOD  &mt LCTRL TAB  &lt 1 SPACE  &lt 4 LANG2  &mt LCTRL LANG1  &lt 3 RET                               &lt 2 ESCAPE
             >;
@@ -40,7 +40,7 @@
             bindings = <
   &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                     &kp HOME       &kp END          &trans           &kp PSCRN           &trans
   &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                     &kp LEFT        &kp DOWN        &kp UP_ARROW     &kp RIGHT        &kp PAGE_UP
-  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &msc MOVE_X(15) &msc MOVE_Y(15) &msc MOVE_Y(-15) &msc MOVE_X(-15) &kp PAGE_DOWN
+  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp PAGE_DOWN
   &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans  &trans  &trans                                          &trans
             >;
         };
