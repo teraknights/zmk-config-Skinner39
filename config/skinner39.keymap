@@ -1,25 +1,41 @@
 #include "keycode_japanese.h"
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        LEFT_CLICK {
+            bindings = <&mkp LCLK>;
+            key-positions = <16 17>;
+        };
+
+        RIGHT_CLICK {
+            bindings = <&mkp RCLK>;
+            key-positions = <17 18>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer { //0
-            bindings = < //default
-  &kp Q         &kp W      &kp E       &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
-  &mt LEFT_ALT A   &kp S      &kp D       &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
-  &mt LSHFT Z   &kp X      &kp C       &kp V          &kp B                                      &kp N      &kp M  &mkp LCLK  &mkp RCLK   &mt LSHFT MINUS
-  &kp LEFT_WIN  &lt 6 COMMA  &lt 5 PERIOD  &mt LCTRL TAB  &lt 1 SPACE  &lt 4 LANG2  &mt LCTRL LANG1  &lt 3 RET                               &lt 2 ESCAPE
+        default_layer {
+            bindings = <
+  &kp Q           &kp W        &kp E         &kp R          &kp T                                      &kp Y      &kp U  &kp I      &kp O      &mt RIGHT_ALT P
+  &mt LEFT_ALT A  &kp S        &kp D         &kp F          &kp G                                      &kp H      &kp J  &kp K      &kp L      &kp BACKSPACE
+  &mt LSHFT Z     &kp X        &kp C         &kp V          &kp B                                      &kp N      &kp M  &mkp LCLK  &mkp RCLK  &mt LSHFT MINUS
+  &kp LEFT_WIN    &lt 6 COMMA  &lt 5 PERIOD  &mt LCTRL TAB  &lt 1 SPACE  &lt 4 LANG2  &mt LCTRL LANG1  &lt 3 RET                               &lt 2 ESCAPE
             >;
         };
 
-        symbol { // 1
+        symbol {
             bindings = <
   &kp JP_PRCNT  &kp JP_DLLR   &kp JP_AMPS   &kp JP_CARET  &kp JP_SLASH                  &kp JP_BSLH   &kp JP_LBRC  &kp JP_RBRC  &kp JP_LT    &kp JP_RT
   &kp JP_AT     &kp JP_HASH   &kp JP_ASTRK  &kp JP_PLUS   &kp JP_EQUAL                  &kp JP_UNDER  &kp JP_LPAR  &kp JP_RPAR  &kp JP_SEMI  &kp JP_COLON
@@ -28,43 +44,43 @@
             >;
         };
 
-        bt_layer { // 2
+        bt_layer {
             bindings = <
-  &trans  &trans   &trans      &trans    &trans                                                 &trans       &trans  &trans      &trans  &trans
-  &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                       &trans       &trans      &trans  &trans     &trans
-  &trans           &bt BT_SEL 4        &trans        &trans        &trans                       &trans  &trans       &trans            &trans                &kp BACKSLASH
-  &trans           &trans        &trans        &trans        &trans       &trans             &trans  &trans                                                                 &trans
+  &trans      &trans        &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans
+  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                  &trans  &trans  &trans  &trans  &trans
+  &trans      &bt BT_SEL 4  &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &kp BACKSLASH
+  &trans      &trans        &trans        &trans        &trans        &trans  &trans  &trans                          &trans
             >;
         };
 
-        number { //3
+        number {
             bindings = <
-  &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                     &kp HOME       &kp END          &trans           &kp PSCRN           &trans
-  &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                     &kp LEFT        &kp DOWN        &kp UP_ARROW     &kp RIGHT        &kp PAGE_UP
-  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp PAGE_DOWN
-  &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans  &trans  &trans                                          &trans
+  &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                  &kp HOME        &kp END         &trans        &kp PSCRN        &trans
+  &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp PAGE_UP
+  &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp PAGE_DOWN
+  &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans  &trans  &trans                                                         &trans
             >;
         };
 
-        function_layer { //4
+        function_layer {
             bindings = <
   &trans  &kp F7  &kp F8  &kp F9  &kp F10                  &trans  &trans  &trans  &trans  &trans
-  &trans  &kp F4  &kp F5  &kp F6  &kp F11                   &trans  &trans  &trans  &trans  &trans
-  &trans  &kp F1  &kp F2  &kp F3  &kp F12                   &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+  &trans  &kp F4  &kp F5  &kp F6  &kp F11                  &trans  &trans  &trans  &trans  &trans
+  &trans  &kp F1  &kp F2  &kp F3  &kp F12                  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans                          &trans
             >;
         };
 
-        scroll_layer { //5
+        scroll_layer {
             bindings = <
   &trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans                          &trans
-             >;
+            >;
         };
 
-        snipe_layer { //6
+        snipe_layer {
             bindings = <
   &trans  &trans  &trans  &trans  &bootloader                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
