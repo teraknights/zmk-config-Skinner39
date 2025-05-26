@@ -28,10 +28,10 @@
 
         default_layer {
             bindings = <
-  &kp Q           &kp W         &kp E         &kp R            &kp T                                    &kp Y      &kp U  &kp I      &kp O       &mt RIGHT_ALT P
-  &kp A           &lt 5 S       &kp D         &kp F            &kp G                                    &kp H      &kp J  &kp K      &kp L       &kp BACKSPACE
-  &kp Z           &kp X         &kp C         &kp V            &kp B                                    &kp N      &kp M  &kp COMMA  &kp PERIOD  &mt LSHFT MINUS
-  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &mt LCTRL LANG2  &lt 1 SPACE  &lt 4 TAB  &mt LCTRL LANG1  &lt 3 RET                                &lt 2 ESCAPE
+  &kp Q      &kp W         &kp E         &kp R                 &kp T                                  &kp Y             &kp U  &kp I      &kp O       &kp BACKSPACE
+  &kp A      &lt 5 S       &kp D         &kp F                 &kp G                                  &kp H             &kp J  &kp K      &kp L       &kp P
+  &kp Z      &kp X         &kp C         &kp V                 &kp B                                  &kp N             &kp M  &kp COMMA  &kp PERIOD  &mt LSHFT MINUS
+  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT LANG2  &lt 1 SPACE  &lt 4 TAB  &mt LCTRL RET  &lt 3 LANGUAGE_1                                &lt 2 ESCAPE
             >;
         };
 
@@ -55,7 +55,7 @@
 
         number {
             bindings = <
-  &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                  &kp HOME        &kp END         &kp LA(LEFT)  &kp PSCRN        &trans
+  &kp JP_EQUAL           &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp JP_SLASH                  &kp HOME        &kp END         &kp LA(LEFT)  &kp PSCRN        &kp DELETE
   &kp NUMBER_0           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTRK                  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp PAGE_UP
   &mt LEFT_SHIFT PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS                  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp PAGE_DOWN
   &trans                 &kp JP_LPAR   &kp JP_RPAR   &kp JP_PLUS   &trans        &trans  &trans  &trans                                                         &trans
